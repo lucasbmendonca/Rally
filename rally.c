@@ -220,30 +220,32 @@ int getConcProvaVal() {
 
 void displayListTempoProva() {
 
+    //lista
     InfoCorrida* current = prova.corrida;
-    InfoCorrida* ps;
+    
+    //array
+    InfoCorrida resultado[100] = {NULL};
+    int tam = 0;
     while (current) {
-        ps = current->next;
-        while (ps) {
-            if (current->tempoTotal < ps->tempoTotal) {
-                InfoCorrida aux = *current;
-                current->concorrente = ps->concorrente;
-                current->num_etapas = ps->num_etapas;
-                current->tempoTotal = ps->tempoTotal;
-                //current->next = ps->next;
-                ps->concorrente = aux.concorrente;
-                ps->num_etapas = aux.num_etapas;
-                ps->tempoTotal = aux.tempoTotal;
-                //ps->next = aux.next;
-            }
-            ps = ps->next;
-        }
+        //checar se é valido
+        if(current->num_etapas == current->concorrente.qtdEtapas && current->num_etapas !=0)
+            resultado[tam++] = *current;
         current = current->next;
     }
 
-    InfoCorrida* aux = prova.corrida;
-    while (aux) {
-        printf("Concorrente %-20s Tempo de prova: %-20d\n", aux->concorrente.nome, aux->tempoTotal);
-        aux = aux->next;
+    //ordenação array
+    for (int i = 0; i < tam; i++) {
+        for (int j = i + 1; j <= tam; j++) {
+            if (resultado[i].tempoTotal < resultado[j].tempoTotal) {
+                InfoCorrida aux = resultado[i];
+                resultado[i] = resultado[j];
+                resultado[j] = aux;
+            }
+        }
+    }
+
+    //print array
+    for (int i = 0; i < tam; i++){
+        printf("Concorrente %-20s Tempo de prova: %-20d\n", resultado[i].concorrente.nome, resultado[i].tempoTotal);
     }
 }
