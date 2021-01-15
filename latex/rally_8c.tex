@@ -1,0 +1,182 @@
+\hypertarget{rally_8c}{}\doxysection{ReferÃªncia ao ficheiro rally.\+c}
+\label{rally_8c}\index{rally.c@{rally.c}}
+{\ttfamily \#include \char`\"{}rally.\+h\char`\"{}}\newline
+\doxysubsection*{FunÃ§Ãµes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{rally_8c_a8f82297f629793c8ab94b2610cdb900d}{processa\+Corrida}} ()
+\item 
+int \mbox{\hyperlink{rally_8c_ae1a61f3f34dff01f846cdb35b36b8101}{processa\+Etapa}} ()
+\item 
+int \mbox{\hyperlink{rally_8c_afb2069ddbbdf58971eb6bff7bc9d837e}{processa\+Concorrentes}} ()
+\item 
+\mbox{\hyperlink{rally_8h_aadc49f8925f7fc23145712bd63ba8a22}{Info\+Corrida}} $\ast$ \mbox{\hyperlink{rally_8c_a1b0095893ca358cb7b0df5d4ef820703}{get\+Result}} ()
+\item 
+int \mbox{\hyperlink{rally_8c_a47b10ba76d4d50663e4c4c5fde09ec7e}{get\+Qtd\+Concorrentes}} ()
+\item 
+int \mbox{\hyperlink{rally_8c_a4185d72cdbd40e226c30eb351504ed6e}{get\+Conc\+Prova\+Val}} ()
+\item 
+void \mbox{\hyperlink{rally_8c_ac91b296df85abcfdddc4fbd873926b37}{display\+List\+Tempo\+Prova}} ()
+\item 
+void \mbox{\hyperlink{rally_8c_a98e1517c318f44570b1cbfdfce8083f6}{calc\+Media\+Etapa}} ()
+\item 
+void \mbox{\hyperlink{rally_8c_adeced35969b24a8fdd6304b5d00332bf}{display\+Rapido\+Lento}} ()
+\item 
+int \mbox{\hyperlink{rally_8c_af0d22f4a719a151ad0d0643743ed43e9}{display\+Min\+Temp\+Prova}} ()
+\item 
+void \mbox{\hyperlink{rally_8c_a2dce6a2d99b01465df191768483d52e8}{calc\+Velocidade\+Media}} ()
+\item 
+void \mbox{\hyperlink{rally_8c_a8ff170c7e270d915e5d5a67a6023c39f}{display\+Tabela}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{VariÃ¡veis}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rally_8h_aadc49f8925f7fc23145712bd63ba8a22}{Info\+Corrida}} $\ast$ \mbox{\hyperlink{rally_8c_a944805840502393e767e7f29fa3701cb}{corrida}} = NULL
+\item 
+\mbox{\hyperlink{rally_8h_aadc49f8925f7fc23145712bd63ba8a22}{Info\+Corrida}} $\ast$ \mbox{\hyperlink{rally_8c_a050bbb55795a5e3ccfcb01440f97835f}{corrida\+\_\+ult}} = NULL
+\item 
+\mbox{\hyperlink{rally_8h_a57f2141526dde5a60fcfb598e95e3807}{Prova}} \mbox{\hyperlink{rally_8c_a3c855b8e0bf43ecb814da023f5cc8dde}{prova}} = \{ NULL,0 \}
+\item 
+\mbox{\hyperlink{rally_8h_a789f5bb1e285f694978a121379361dbc}{Media\+Etapa}} \mbox{\hyperlink{rally_8c_a26fd589a72a936ee8ded4f43ac707e0a}{media\+Etapa}} \mbox{[}3\mbox{]} = \{ \{\char`\"{}P\char`\"{},\char`\"{}E1\char`\"{},0,0\},\{\char`\"{}E1\char`\"{},\char`\"{}E2\char`\"{}, 0, 0\},\{\char`\"{}E2\char`\"{},\char`\"{}C\char`\"{},0,0\} \}
+\item 
+char \mbox{\hyperlink{rally_8c_a34138b575feca5e3af5da2a3f221c18c}{linha}} \mbox{[}\mbox{\hyperlink{rally_8h_a1d5dab30b404fab91608086105afc78c}{MAX\+\_\+\+BUFFER}}\mbox{]}
+\item 
+char $\ast$ \mbox{\hyperlink{rally_8c_a13fb0c19eec286b2ca736f003429d9e6}{valores}}
+\item 
+char $\ast$$\ast$ \mbox{\hyperlink{rally_8c_a6914c6ff04293a552da455a278490525}{resultado}} = NULL
+\item 
+\mbox{\hyperlink{rally_8c_adb7c9de4ce591210f9be807eeac88943}{tamanho}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{DocumentaÃ§Ã£o das funÃ§Ãµes}
+\mbox{\Hypertarget{rally_8c_a98e1517c318f44570b1cbfdfce8083f6}\label{rally_8c_a98e1517c318f44570b1cbfdfce8083f6}} 
+\index{rally.c@{rally.c}!calcMediaEtapa@{calcMediaEtapa}}
+\index{calcMediaEtapa@{calcMediaEtapa}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{calcMediaEtapa()}{calcMediaEtapa()}}
+{\footnotesize\ttfamily void calc\+Media\+Etapa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculo das medias dos tempos por etapa e ordenado por ocorrencia. \mbox{\Hypertarget{rally_8c_a2dce6a2d99b01465df191768483d52e8}\label{rally_8c_a2dce6a2d99b01465df191768483d52e8}} 
+\index{rally.c@{rally.c}!calcVelocidadeMedia@{calcVelocidadeMedia}}
+\index{calcVelocidadeMedia@{calcVelocidadeMedia}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{calcVelocidadeMedia()}{calcVelocidadeMedia()}}
+{\footnotesize\ttfamily void calc\+Velocidade\+Media (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rally_8c_ac91b296df85abcfdddc4fbd873926b37}\label{rally_8c_ac91b296df85abcfdddc4fbd873926b37}} 
+\index{rally.c@{rally.c}!displayListTempoProva@{displayListTempoProva}}
+\index{displayListTempoProva@{displayListTempoProva}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{displayListTempoProva()}{displayListTempoProva()}}
+{\footnotesize\ttfamily void display\+List\+Tempo\+Prova (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Apresentacao do concorrente mais rapido / mais lento a efetuar uma prova valida. \mbox{\Hypertarget{rally_8c_af0d22f4a719a151ad0d0643743ed43e9}\label{rally_8c_af0d22f4a719a151ad0d0643743ed43e9}} 
+\index{rally.c@{rally.c}!displayMinTempProva@{displayMinTempProva}}
+\index{displayMinTempProva@{displayMinTempProva}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{displayMinTempProva()}{displayMinTempProva()}}
+{\footnotesize\ttfamily int display\+Min\+Temp\+Prova (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rally_8c_adeced35969b24a8fdd6304b5d00332bf}\label{rally_8c_adeced35969b24a8fdd6304b5d00332bf}} 
+\index{rally.c@{rally.c}!displayRapidoLento@{displayRapidoLento}}
+\index{displayRapidoLento@{displayRapidoLento}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{displayRapidoLento()}{displayRapidoLento()}}
+{\footnotesize\ttfamily void display\+Rapido\+Lento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Apresentação do concorrente mais rápido / mais lento a efetuar uma prova válida. \mbox{\Hypertarget{rally_8c_a8ff170c7e270d915e5d5a67a6023c39f}\label{rally_8c_a8ff170c7e270d915e5d5a67a6023c39f}} 
+\index{rally.c@{rally.c}!displayTabela@{displayTabela}}
+\index{displayTabela@{displayTabela}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{displayTabela()}{displayTabela()}}
+{\footnotesize\ttfamily void display\+Tabela (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rally_8c_a4185d72cdbd40e226c30eb351504ed6e}\label{rally_8c_a4185d72cdbd40e226c30eb351504ed6e}} 
+\index{rally.c@{rally.c}!getConcProvaVal@{getConcProvaVal}}
+\index{getConcProvaVal@{getConcProvaVal}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{getConcProvaVal()}{getConcProvaVal()}}
+{\footnotesize\ttfamily int get\+Conc\+Prova\+Val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Quantidade de concorrentes com provas validas. \mbox{\Hypertarget{rally_8c_a47b10ba76d4d50663e4c4c5fde09ec7e}\label{rally_8c_a47b10ba76d4d50663e4c4c5fde09ec7e}} 
+\index{rally.c@{rally.c}!getQtdConcorrentes@{getQtdConcorrentes}}
+\index{getQtdConcorrentes@{getQtdConcorrentes}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{getQtdConcorrentes()}{getQtdConcorrentes()}}
+{\footnotesize\ttfamily int get\+Qtd\+Concorrentes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Busca quantidade de concorrentes. \mbox{\Hypertarget{rally_8c_a1b0095893ca358cb7b0df5d4ef820703}\label{rally_8c_a1b0095893ca358cb7b0df5d4ef820703}} 
+\index{rally.c@{rally.c}!getResult@{getResult}}
+\index{getResult@{getResult}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rally_8h_aadc49f8925f7fc23145712bd63ba8a22}{Info\+Corrida}}$\ast$ get\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retorna o resultado do carregamento efetuado \mbox{\Hypertarget{rally_8c_afb2069ddbbdf58971eb6bff7bc9d837e}\label{rally_8c_afb2069ddbbdf58971eb6bff7bc9d837e}} 
+\index{rally.c@{rally.c}!processaConcorrentes@{processaConcorrentes}}
+\index{processaConcorrentes@{processaConcorrentes}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{processaConcorrentes()}{processaConcorrentes()}}
+{\footnotesize\ttfamily int processa\+Concorrentes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Processa os concorrentes com provas validas ou não \mbox{\Hypertarget{rally_8c_a8f82297f629793c8ab94b2610cdb900d}\label{rally_8c_a8f82297f629793c8ab94b2610cdb900d}} 
+\index{rally.c@{rally.c}!processaCorrida@{processaCorrida}}
+\index{processaCorrida@{processaCorrida}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{processaCorrida()}{processaCorrida()}}
+{\footnotesize\ttfamily int processa\+Corrida (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Processa ficheiro de informações sobre uma corrida \mbox{\Hypertarget{rally_8c_ae1a61f3f34dff01f846cdb35b36b8101}\label{rally_8c_ae1a61f3f34dff01f846cdb35b36b8101}} 
+\index{rally.c@{rally.c}!processaEtapa@{processaEtapa}}
+\index{processaEtapa@{processaEtapa}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{processaEtapa()}{processaEtapa()}}
+{\footnotesize\ttfamily int processa\+Etapa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Processa as etapas que existem em uma corrida, assim como suas distancias totais 
+
+\doxysubsection{DocumentaÃ§Ã£o das variÃ¡veis}
+\mbox{\Hypertarget{rally_8c_a944805840502393e767e7f29fa3701cb}\label{rally_8c_a944805840502393e767e7f29fa3701cb}} 
+\index{rally.c@{rally.c}!corrida@{corrida}}
+\index{corrida@{corrida}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{corrida}{corrida}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rally_8h_aadc49f8925f7fc23145712bd63ba8a22}{Info\+Corrida}}$\ast$ \mbox{\hyperlink{structcorrida}{corrida}} = NULL}
+
+@rally.c \begin{DoxyAuthor}{Autor}
+Lucas Mendonça \href{mailto:a17870@alunos.ipca.pt}{\texttt{ a17870@alunos.\+ipca.\+pt}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{VersÃ£o}
+1.\+0
+\end{DoxyVersion}
+\hypertarget{rally_8h_DESCRIPTION}{}\doxysubsection{DESCRIPTION}\label{rally_8h_DESCRIPTION}
+Ficheiro com a implementação das funções da biblioteca \mbox{\Hypertarget{rally_8c_a050bbb55795a5e3ccfcb01440f97835f}\label{rally_8c_a050bbb55795a5e3ccfcb01440f97835f}} 
+\index{rally.c@{rally.c}!corrida\_ult@{corrida\_ult}}
+\index{corrida\_ult@{corrida\_ult}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{corrida\_ult}{corrida\_ult}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rally_8h_aadc49f8925f7fc23145712bd63ba8a22}{Info\+Corrida}}$\ast$ corrida\+\_\+ult = NULL}
+
+\mbox{\Hypertarget{rally_8c_a34138b575feca5e3af5da2a3f221c18c}\label{rally_8c_a34138b575feca5e3af5da2a3f221c18c}} 
+\index{rally.c@{rally.c}!linha@{linha}}
+\index{linha@{linha}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{linha}{linha}}
+{\footnotesize\ttfamily char linha\mbox{[}\mbox{\hyperlink{rally_8h_a1d5dab30b404fab91608086105afc78c}{MAX\+\_\+\+BUFFER}}\mbox{]}}
+
+\mbox{\Hypertarget{rally_8c_a26fd589a72a936ee8ded4f43ac707e0a}\label{rally_8c_a26fd589a72a936ee8ded4f43ac707e0a}} 
+\index{rally.c@{rally.c}!mediaEtapa@{mediaEtapa}}
+\index{mediaEtapa@{mediaEtapa}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{mediaEtapa}{mediaEtapa}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rally_8h_a789f5bb1e285f694978a121379361dbc}{Media\+Etapa}} \mbox{\hyperlink{structmedia_etapa}{media\+Etapa}}\mbox{[}3\mbox{]} = \{ \{\char`\"{}P\char`\"{},\char`\"{}E1\char`\"{},0,0\},\{\char`\"{}E1\char`\"{},\char`\"{}E2\char`\"{}, 0, 0\},\{\char`\"{}E2\char`\"{},\char`\"{}C\char`\"{},0,0\} \}}
+
+\mbox{\Hypertarget{rally_8c_a3c855b8e0bf43ecb814da023f5cc8dde}\label{rally_8c_a3c855b8e0bf43ecb814da023f5cc8dde}} 
+\index{rally.c@{rally.c}!prova@{prova}}
+\index{prova@{prova}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{prova}{prova}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rally_8h_a57f2141526dde5a60fcfb598e95e3807}{Prova}} \mbox{\hyperlink{structprova}{prova}} = \{ NULL,0 \}}
+
+\mbox{\Hypertarget{rally_8c_a6914c6ff04293a552da455a278490525}\label{rally_8c_a6914c6ff04293a552da455a278490525}} 
+\index{rally.c@{rally.c}!resultado@{resultado}}
+\index{resultado@{resultado}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{resultado}{resultado}}
+{\footnotesize\ttfamily char$\ast$$\ast$ resultado = NULL}
+
+\mbox{\Hypertarget{rally_8c_adb7c9de4ce591210f9be807eeac88943}\label{rally_8c_adb7c9de4ce591210f9be807eeac88943}} 
+\index{rally.c@{rally.c}!tamanho@{tamanho}}
+\index{tamanho@{tamanho}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{tamanho}{tamanho}}
+{\footnotesize\ttfamily tamanho = 0}
+
+\mbox{\Hypertarget{rally_8c_a13fb0c19eec286b2ca736f003429d9e6}\label{rally_8c_a13fb0c19eec286b2ca736f003429d9e6}} 
+\index{rally.c@{rally.c}!valores@{valores}}
+\index{valores@{valores}!rally.c@{rally.c}}
+\doxysubsubsection{\texorpdfstring{valores}{valores}}
+{\footnotesize\ttfamily char$\ast$ valores}
+

@@ -1,0 +1,213 @@
+\hypertarget{rally_8h}{}\doxysection{ReferÃªncia ao ficheiro rally.\+h}
+\label{rally_8h}\index{rally.h@{rally.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structetapa}{etapa}}
+\item 
+struct \mbox{\hyperlink{structconcorrente}{concorrente}}
+\item 
+struct \mbox{\hyperlink{structcorrida}{corrida}}
+\item 
+struct \mbox{\hyperlink{structprova}{prova}}
+\item 
+struct \mbox{\hyperlink{structmedia_etapa}{media\+Etapa}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rally_8h_a1d5dab30b404fab91608086105afc78c}{MAX\+\_\+\+BUFFER}}~255
+\item 
+\#define \mbox{\hyperlink{rally_8h_a0d12904b70ee72dfc215cef4fd3d9b92}{TXT\+\_\+\+CORRIDA}}~\char`\"{}corrida.\+txt\char`\"{}
+\item 
+\#define \mbox{\hyperlink{rally_8h_aae520648f10a52ec76de27169821f434}{TXT\+\_\+\+ETAPA}}~\char`\"{}etapa.\+txt\char`\"{}
+\item 
+\#define \mbox{\hyperlink{rally_8h_af8f2996136d3c9029c4ef8d45ea33e05}{TXT\+\_\+\+CONC}}~\char`\"{}concorrentes.\+txt\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{DefiniÃ§Ãµes de tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structetapa}{etapa}} \mbox{\hyperlink{rally_8h_a213e46fb1d346bea5bce4908d7a0c7f1}{Etapa}}
+\item 
+typedef struct \mbox{\hyperlink{structconcorrente}{concorrente}} \mbox{\hyperlink{rally_8h_abdc3340c64e6f3e95444d05254c8c766}{Concorrente}}
+\item 
+typedef struct \mbox{\hyperlink{structcorrida}{corrida}} \mbox{\hyperlink{rally_8h_aadc49f8925f7fc23145712bd63ba8a22}{Info\+Corrida}}
+\item 
+typedef struct \mbox{\hyperlink{structprova}{prova}} \mbox{\hyperlink{rally_8h_a57f2141526dde5a60fcfb598e95e3807}{Prova}}
+\item 
+typedef struct \mbox{\hyperlink{structmedia_etapa}{media\+Etapa}} \mbox{\hyperlink{rally_8h_a789f5bb1e285f694978a121379361dbc}{Media\+Etapa}}
+\end{DoxyCompactItemize}
+\doxysubsection*{FunÃ§Ãµes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{rally_8h_a8f82297f629793c8ab94b2610cdb900d}{processa\+Corrida}} ()
+\item 
+int \mbox{\hyperlink{rally_8h_ae1a61f3f34dff01f846cdb35b36b8101}{processa\+Etapa}} ()
+\item 
+int \mbox{\hyperlink{rally_8h_afb2069ddbbdf58971eb6bff7bc9d837e}{processa\+Concorrentes}} ()
+\item 
+\mbox{\hyperlink{rally_8h_aadc49f8925f7fc23145712bd63ba8a22}{Info\+Corrida}} $\ast$ \mbox{\hyperlink{rally_8h_a1b0095893ca358cb7b0df5d4ef820703}{get\+Result}} ()
+\item 
+int \mbox{\hyperlink{rally_8h_a47b10ba76d4d50663e4c4c5fde09ec7e}{get\+Qtd\+Concorrentes}} ()
+\item 
+int \mbox{\hyperlink{rally_8h_a4185d72cdbd40e226c30eb351504ed6e}{get\+Conc\+Prova\+Val}} ()
+\item 
+void \mbox{\hyperlink{rally_8h_ac91b296df85abcfdddc4fbd873926b37}{display\+List\+Tempo\+Prova}} ()
+\item 
+void \mbox{\hyperlink{rally_8h_a98e1517c318f44570b1cbfdfce8083f6}{calc\+Media\+Etapa}} ()
+\item 
+void \mbox{\hyperlink{rally_8h_adeced35969b24a8fdd6304b5d00332bf}{display\+Rapido\+Lento}} ()
+\item 
+int \mbox{\hyperlink{rally_8h_af0d22f4a719a151ad0d0643743ed43e9}{display\+Min\+Temp\+Prova}} ()
+\item 
+void \mbox{\hyperlink{rally_8h_a2dce6a2d99b01465df191768483d52e8}{calc\+Velocidade\+Media}} ()
+\item 
+void \mbox{\hyperlink{rally_8h_a8ff170c7e270d915e5d5a67a6023c39f}{display\+Tabela}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{DocumentaÃ§Ã£o das macros}
+\mbox{\Hypertarget{rally_8h_a1d5dab30b404fab91608086105afc78c}\label{rally_8h_a1d5dab30b404fab91608086105afc78c}} 
+\index{rally.h@{rally.h}!MAX\_BUFFER@{MAX\_BUFFER}}
+\index{MAX\_BUFFER@{MAX\_BUFFER}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_BUFFER}{MAX\_BUFFER}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+BUFFER~255}
+
+@rally.h \begin{DoxyAuthor}{Autor}
+Lucas Mendonça \href{mailto:a17870@alunos.ipca.pt}{\texttt{ a17870@alunos.\+ipca.\+pt}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{VersÃ£o}
+1.\+0
+\end{DoxyVersion}
+\hypertarget{rally_8h_DESCRIPTION}{}\doxysubsection{DESCRIPTION}\label{rally_8h_DESCRIPTION}
+Ficheiro com a definição das estruturas e funções utilizadas ao longo do projeto. Bliblioteca criada para auxílio do processamento. \mbox{\Hypertarget{rally_8h_af8f2996136d3c9029c4ef8d45ea33e05}\label{rally_8h_af8f2996136d3c9029c4ef8d45ea33e05}} 
+\index{rally.h@{rally.h}!TXT\_CONC@{TXT\_CONC}}
+\index{TXT\_CONC@{TXT\_CONC}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{TXT\_CONC}{TXT\_CONC}}
+{\footnotesize\ttfamily \#define TXT\+\_\+\+CONC~\char`\"{}concorrentes.\+txt\char`\"{}}
+
+\mbox{\Hypertarget{rally_8h_a0d12904b70ee72dfc215cef4fd3d9b92}\label{rally_8h_a0d12904b70ee72dfc215cef4fd3d9b92}} 
+\index{rally.h@{rally.h}!TXT\_CORRIDA@{TXT\_CORRIDA}}
+\index{TXT\_CORRIDA@{TXT\_CORRIDA}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{TXT\_CORRIDA}{TXT\_CORRIDA}}
+{\footnotesize\ttfamily \#define TXT\+\_\+\+CORRIDA~\char`\"{}corrida.\+txt\char`\"{}}
+
+\mbox{\Hypertarget{rally_8h_aae520648f10a52ec76de27169821f434}\label{rally_8h_aae520648f10a52ec76de27169821f434}} 
+\index{rally.h@{rally.h}!TXT\_ETAPA@{TXT\_ETAPA}}
+\index{TXT\_ETAPA@{TXT\_ETAPA}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{TXT\_ETAPA}{TXT\_ETAPA}}
+{\footnotesize\ttfamily \#define TXT\+\_\+\+ETAPA~\char`\"{}etapa.\+txt\char`\"{}}
+
+
+
+\doxysubsection{DocumentaÃ§Ã£o dos tipos}
+\mbox{\Hypertarget{rally_8h_abdc3340c64e6f3e95444d05254c8c766}\label{rally_8h_abdc3340c64e6f3e95444d05254c8c766}} 
+\index{rally.h@{rally.h}!Concorrente@{Concorrente}}
+\index{Concorrente@{Concorrente}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{Concorrente}{Concorrente}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structconcorrente}{concorrente}} \mbox{\hyperlink{rally_8h_abdc3340c64e6f3e95444d05254c8c766}{Concorrente}}}
+
+Guarda os dados do concorrente, como seu nome, nome do carro, primeira etapa realizada, ultima etapa realizada e quantidade de etapas realizadas numa determinada prova. \mbox{\Hypertarget{rally_8h_a213e46fb1d346bea5bce4908d7a0c7f1}\label{rally_8h_a213e46fb1d346bea5bce4908d7a0c7f1}} 
+\index{rally.h@{rally.h}!Etapa@{Etapa}}
+\index{Etapa@{Etapa}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{Etapa}{Etapa}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structetapa}{etapa}} \mbox{\hyperlink{rally_8h_a213e46fb1d346bea5bce4908d7a0c7f1}{Etapa}}}
+
+Etapa realizada por um concorrente em uma determinada prova, com nome de início da etapa, fim, distância percorrida, tempo em que foi percorrida pelo concorrente e um apontador para a próxima etapa efetuada; \mbox{\Hypertarget{rally_8h_aadc49f8925f7fc23145712bd63ba8a22}\label{rally_8h_aadc49f8925f7fc23145712bd63ba8a22}} 
+\index{rally.h@{rally.h}!InfoCorrida@{InfoCorrida}}
+\index{InfoCorrida@{InfoCorrida}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{InfoCorrida}{InfoCorrida}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structcorrida}{corrida}} \mbox{\hyperlink{rally_8h_aadc49f8925f7fc23145712bd63ba8a22}{Info\+Corrida}}}
+
+Guarda informações relativas à corrida e ao concorrente que a realizou, ou seja, possui uma estrutura de dados de Concorrente, o número de etapas que a corrida possui, tempo total de corrida do concorrente, distancia total que o concorrente percorreu, assim como sua velocidade media ao longo da corrida. Ainda, há um apontador para outra informação de corrida de outro concorrente. \mbox{\Hypertarget{rally_8h_a789f5bb1e285f694978a121379361dbc}\label{rally_8h_a789f5bb1e285f694978a121379361dbc}} 
+\index{rally.h@{rally.h}!MediaEtapa@{MediaEtapa}}
+\index{MediaEtapa@{MediaEtapa}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{MediaEtapa}{MediaEtapa}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmedia_etapa}{media\+Etapa}} \mbox{\hyperlink{rally_8h_a789f5bb1e285f694978a121379361dbc}{Media\+Etapa}}}
+
+Contém informações sobre as etapas e suas medias. \mbox{\Hypertarget{rally_8h_a57f2141526dde5a60fcfb598e95e3807}\label{rally_8h_a57f2141526dde5a60fcfb598e95e3807}} 
+\index{rally.h@{rally.h}!Prova@{Prova}}
+\index{Prova@{Prova}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{Prova}{Prova}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structprova}{prova}} \mbox{\hyperlink{rally_8h_a57f2141526dde5a60fcfb598e95e3807}{Prova}}}
+
+Guarda um apontador para a informação de um concorrente em uma corrida (início da lista), assim como a quantidade total de concorrentes que participaram daquela prova. 
+
+\doxysubsection{DocumentaÃ§Ã£o das funÃ§Ãµes}
+\mbox{\Hypertarget{rally_8h_a98e1517c318f44570b1cbfdfce8083f6}\label{rally_8h_a98e1517c318f44570b1cbfdfce8083f6}} 
+\index{rally.h@{rally.h}!calcMediaEtapa@{calcMediaEtapa}}
+\index{calcMediaEtapa@{calcMediaEtapa}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{calcMediaEtapa()}{calcMediaEtapa()}}
+{\footnotesize\ttfamily void calc\+Media\+Etapa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculo das medias dos tempos por etapa e ordenado por ocorrencia. \mbox{\Hypertarget{rally_8h_a2dce6a2d99b01465df191768483d52e8}\label{rally_8h_a2dce6a2d99b01465df191768483d52e8}} 
+\index{rally.h@{rally.h}!calcVelocidadeMedia@{calcVelocidadeMedia}}
+\index{calcVelocidadeMedia@{calcVelocidadeMedia}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{calcVelocidadeMedia()}{calcVelocidadeMedia()}}
+{\footnotesize\ttfamily void calc\+Velocidade\+Media (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rally_8h_ac91b296df85abcfdddc4fbd873926b37}\label{rally_8h_ac91b296df85abcfdddc4fbd873926b37}} 
+\index{rally.h@{rally.h}!displayListTempoProva@{displayListTempoProva}}
+\index{displayListTempoProva@{displayListTempoProva}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{displayListTempoProva()}{displayListTempoProva()}}
+{\footnotesize\ttfamily void display\+List\+Tempo\+Prova (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Apresentacao do concorrente mais rapido / mais lento a efetuar uma prova valida. \mbox{\Hypertarget{rally_8h_af0d22f4a719a151ad0d0643743ed43e9}\label{rally_8h_af0d22f4a719a151ad0d0643743ed43e9}} 
+\index{rally.h@{rally.h}!displayMinTempProva@{displayMinTempProva}}
+\index{displayMinTempProva@{displayMinTempProva}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{displayMinTempProva()}{displayMinTempProva()}}
+{\footnotesize\ttfamily int display\+Min\+Temp\+Prova (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rally_8h_adeced35969b24a8fdd6304b5d00332bf}\label{rally_8h_adeced35969b24a8fdd6304b5d00332bf}} 
+\index{rally.h@{rally.h}!displayRapidoLento@{displayRapidoLento}}
+\index{displayRapidoLento@{displayRapidoLento}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{displayRapidoLento()}{displayRapidoLento()}}
+{\footnotesize\ttfamily void display\+Rapido\+Lento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Apresentação do concorrente mais rápido / mais lento a efetuar uma prova válida. \mbox{\Hypertarget{rally_8h_a8ff170c7e270d915e5d5a67a6023c39f}\label{rally_8h_a8ff170c7e270d915e5d5a67a6023c39f}} 
+\index{rally.h@{rally.h}!displayTabela@{displayTabela}}
+\index{displayTabela@{displayTabela}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{displayTabela()}{displayTabela()}}
+{\footnotesize\ttfamily void display\+Tabela (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rally_8h_a4185d72cdbd40e226c30eb351504ed6e}\label{rally_8h_a4185d72cdbd40e226c30eb351504ed6e}} 
+\index{rally.h@{rally.h}!getConcProvaVal@{getConcProvaVal}}
+\index{getConcProvaVal@{getConcProvaVal}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{getConcProvaVal()}{getConcProvaVal()}}
+{\footnotesize\ttfamily int get\+Conc\+Prova\+Val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Quantidade de concorrentes com provas validas. \mbox{\Hypertarget{rally_8h_a47b10ba76d4d50663e4c4c5fde09ec7e}\label{rally_8h_a47b10ba76d4d50663e4c4c5fde09ec7e}} 
+\index{rally.h@{rally.h}!getQtdConcorrentes@{getQtdConcorrentes}}
+\index{getQtdConcorrentes@{getQtdConcorrentes}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{getQtdConcorrentes()}{getQtdConcorrentes()}}
+{\footnotesize\ttfamily int get\+Qtd\+Concorrentes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Busca quantidade de concorrentes. \mbox{\Hypertarget{rally_8h_a1b0095893ca358cb7b0df5d4ef820703}\label{rally_8h_a1b0095893ca358cb7b0df5d4ef820703}} 
+\index{rally.h@{rally.h}!getResult@{getResult}}
+\index{getResult@{getResult}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rally_8h_aadc49f8925f7fc23145712bd63ba8a22}{Info\+Corrida}}$\ast$ get\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retorna o resultado do carregamento efetuado \mbox{\Hypertarget{rally_8h_afb2069ddbbdf58971eb6bff7bc9d837e}\label{rally_8h_afb2069ddbbdf58971eb6bff7bc9d837e}} 
+\index{rally.h@{rally.h}!processaConcorrentes@{processaConcorrentes}}
+\index{processaConcorrentes@{processaConcorrentes}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{processaConcorrentes()}{processaConcorrentes()}}
+{\footnotesize\ttfamily int processa\+Concorrentes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Processa os concorrentes com provas validas ou não \mbox{\Hypertarget{rally_8h_a8f82297f629793c8ab94b2610cdb900d}\label{rally_8h_a8f82297f629793c8ab94b2610cdb900d}} 
+\index{rally.h@{rally.h}!processaCorrida@{processaCorrida}}
+\index{processaCorrida@{processaCorrida}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{processaCorrida()}{processaCorrida()}}
+{\footnotesize\ttfamily int processa\+Corrida (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Processa ficheiro de informações sobre uma corrida \mbox{\Hypertarget{rally_8h_ae1a61f3f34dff01f846cdb35b36b8101}\label{rally_8h_ae1a61f3f34dff01f846cdb35b36b8101}} 
+\index{rally.h@{rally.h}!processaEtapa@{processaEtapa}}
+\index{processaEtapa@{processaEtapa}!rally.h@{rally.h}}
+\doxysubsubsection{\texorpdfstring{processaEtapa()}{processaEtapa()}}
+{\footnotesize\ttfamily int processa\+Etapa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Processa as etapas que existem em uma corrida, assim como suas distancias totais 
