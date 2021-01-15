@@ -348,7 +348,7 @@ void calcVelocidadeMedia() {
 
     //print array
     for (int i = 0; i < tam; i++) {
-        printf("Concorrente %-20s Tempo de prova: %-20d ms com velocidade media: %.2f km/ms\n", resultado[i].concorrente.nome, resultado[i].tempoTotal,resultado[i].velocidadeMedia);
+        printf("Concorrente %-20s Tempo de prova: %-20d ms com velocidade media: %.8f km/ms\n", resultado[i].concorrente.nome, resultado[i].tempoTotal,resultado[i].velocidadeMedia);
     }
 
 }
@@ -360,8 +360,12 @@ void calcVelocidadeMedia() {
     tabela, ordenados por ordem crescente do seu número.
 */
 void displayTabela() {
+    FILE* out;
     //lista
     InfoCorrida* current = prova.corrida;
+
+    int diferenca_anterior = 0;
+    int diferenca_lider = 0;
 
     //array
     InfoCorrida resultado[100] = { NULL };
@@ -374,7 +378,7 @@ void displayTabela() {
     //ordenação array: tempo de prova
     for (int i = 0; i < tam; i++) {
         for (int j = i + 1; j <= tam; j++) {
-            if (resultado[i].tempoTotal < resultado[j].tempoTotal) {
+            if (resultado[i].tempoTotal > resultado[j].tempoTotal && resultado[i].tempoTotal > 0  && resultado[j].tempoTotal > 0) {
                 InfoCorrida aux = resultado[i];
                 resultado[i] = resultado[j];
                 resultado[j] = aux;
@@ -382,12 +386,30 @@ void displayTabela() {
         }
     }
 
-    printf("%-15s%-15s%-15s%-15s%-15s%-15s\n", "Posicao", "Numero", "Carro", "Tempo de prova", "Di. Ant.", "Di. Ldr.\n");
+    /* abre o ficheiro resultados.txt para escrita e associa-o a out */
+    out = fopen("resultados.txt", "w");
+    if (out == NULL)
+    {
+        printf("ERRO: não consigo abrir o ficheiro resultados.txt\n");
+        exit(1);
+    }
+
+    printf("%-15s%-15s%-15s%-15s%-15s%-15s%-15s\n", "Posicao", "Numero", "Nome", "Carro", "Tempo de prova", "Di. Ant.", "Di. Ldr.\n");
+    fprintf(out, "%-15s%-15s%-15s%-15s%-15s%-15s%-15s\n", "Posicao", "Numero", "Nome", "Carro", "Tempo de prova", "Di. Ant.", "Di. Ldr.\n");
     for (int i = 0; i < tam; i++) {
         int posicao = i + 1;
-        if (resultado[i].tempoTotal == 0)
+        if (resultado[i].tempoTotal == 0) {
             printf("%-15s%-15d%-15s%-15s%-15d%-15d%-15d\n", "-", resultado[i].concorrente.id, resultado[i].concorrente.nome, resultado[i].concorrente.carro, resultado[i].tempoTotal, 0, 0);
-        else
-            printf("%-15d%-15d%-15s%-15s%-15d%-15d%-15d\n", posicao, resultado[i].concorrente.id, resultado[i].concorrente.nome, resultado[i].concorrente.carro, resultado[i].tempoTotal, 0, 0);
+            fprintf(out, "%-15s%-15d%-15s%-15s%-15d%-15d%-15d\n", "-", resultado[i].concorrente.id, resultado[i].concorrente.nome, resultado[i].concorrente.carro, resultado[i].tempoTotal, 0, 0);
+            diferenca_anterior = resultado[0].tempoTotal;
+        }
+        else {
+            diferenca_lider = resultado[i].tempoTotal - resultado[0].tempoTotal;
+            diferenca_anterior = resultado[i].tempoTotal - diferenca_anterior;
+            printf("%-15d%-15d%-15s%-15s%-15d%-15d%-15d\n", posicao, resultado[i].concorrente.id, resultado[i].concorrente.nome, resultado[i].concorrente.carro, resultado[i].tempoTotal, diferenca_anterior, diferenca_lider);
+            fprintf(out,"%-15d%-15d%-15s%-15s%-15d%-15d%-15d\n", posicao, resultado[i].concorrente.id, resultado[i].concorrente.nome, resultado[i].concorrente.carro, resultado[i].tempoTotal,diferenca_anterior, diferenca_lider);
+        }
     }
+
+    fclose(out);
 }

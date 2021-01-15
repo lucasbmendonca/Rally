@@ -1,0 +1,7 @@
+Posicao        Numero         Nome           Carro          Tempo de prova Di. Ant.       Di. Ldr.
+      
+1              2              Maria          Subaru         57622          57622          0              
+2              1              Joao           Subaru         76169          18547          18547          
+-              3              Joana          BMW            0              0              0              
+-              5              Jose           Lancia         0              0              0              
+-              6              Carlos         Aud            0              0              0              
